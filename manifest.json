@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "Canlı Türkçe Altyazı",
+  "version": "1.1.0",
+  "description": "İngilizce konuşmayı gerçek zamanlı Türkçe altyazıya çevirir",
+  "minimum_chrome_version": "116",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "tabs",
+    "offscreen",
+    "tabCapture"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "https://translate.googleapis.com/*",
+    "https://api.mymemory.translated.net/*",
+    "https://api.groq.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["content.css"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
