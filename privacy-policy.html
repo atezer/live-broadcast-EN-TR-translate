@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gizlilik Politikası – Canlı Türkçe Altyazı</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      line-height: 1.7;
+      color: #1a1a2e;
+      background: #f8f9fa;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 12px;
+      padding: 48px 40px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 8px;
+      color: #0a0a0f;
+    }
+    .date {
+      font-size: 13px;
+      color: #6b6b80;
+      margin-bottom: 32px;
+    }
+    h2 {
+      font-size: 18px;
+      margin-top: 28px;
+      margin-bottom: 10px;
+      color: #0a0a0f;
+    }
+    p, li {
+      font-size: 15px;
+      color: #333;
+      margin-bottom: 12px;
+    }
+    ul {
+      padding-left: 24px;
+      margin-bottom: 12px;
+    }
+    li { margin-bottom: 6px; }
+    a { color: #6c63ff; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Gizlilik Politikası</h1>
+    <p class="date">Canlı Türkçe Altyazı Chrome Eklentisi &middot; Son güncelleme: Mart 2026</p>
+
+    <h2>1. Genel Bakış</h2>
+    <p>
+      Canlı Türkçe Altyazı ("Eklenti"), İngilizce konuşmayı gerçek zamanlı olarak Türkçe altyazıya çeviren
+      bir Chrome tarayıcı eklentisidir. Bu gizlilik politikası, eklentinin hangi verileri işlediğini ve
+      bu verilerin nasıl kullanıldığını açıklar.
+    </p>
+
+    <h2>2. Toplanan ve İşlenen Veriler</h2>
+    <p>Eklenti aşağıdaki verileri yalnızca işlevselliğini sağlamak amacıyla işler:</p>
+    <ul>
+      <li><strong>Ses verisi (mikrofon):</strong> Mikrofon modu seçildiğinde, tarayıcının Web Speech API'si aracılığıyla ses veriniz işlenir. Bu ses verisi yalnızca tarayıcı içinde kalır ve herhangi bir sunucuya gönderilmez.</li>
+      <li><strong>Ses verisi (sekme sesi):</strong> Hoparlör/sekme modu seçildiğinde, sekme sesi kaydedilir ve konuşmayı metne çevirmek için Groq Whisper API'sine gönderilir.</li>
+      <li><strong>Metin verisi:</strong> Tanınan İngilizce metin, Türkçeye çevrilmek üzere Google Translate API ve/veya MyMemory API'sine gönderilir.</li>
+      <li><strong>Kullanıcı ayarları:</strong> Altyazı konumu, yazı boyutu gibi tercihler tarayıcının yerel depolamasında (chrome.storage.local) saklanır.</li>
+      <li><strong>API anahtarı:</strong> Kullanıcı tarafından girilen Groq API anahtarı, tarayıcının yerel depolamasında saklanır.</li>
+    </ul>
+
+    <h2>3. Üçüncü Taraf Hizmetleri</h2>
+    <p>Eklenti aşağıdaki üçüncü taraf hizmetlerini kullanır:</p>
+    <ul>
+      <li><strong>Google Translate API</strong> (translate.googleapis.com) – Metin çevirisi</li>
+      <li><strong>MyMemory Translation API</strong> (api.mymemory.translated.net) – Yedek çeviri hizmeti</li>
+      <li><strong>Groq Whisper API</strong> (api.groq.com) – Sekme sesi modu için konuşmadan metne dönüşüm</li>
+    </ul>
+    <p>
+      Bu hizmetlere gönderilen veriler, ilgili hizmetlerin kendi gizlilik politikalarına tabidir.
+      Eklenti geliştiricisi bu verileri toplamaz, saklamaz veya üçüncü taraflarla paylaşmaz.
+    </p>
+
+    <h2>4. Veri Saklama</h2>
+    <p>
+      Eklenti herhangi bir sunucu veya veritabanı kullanmaz. Tüm veriler anlık olarak işlenir ve
+      kalıcı olarak saklanmaz. Kullanıcı tercihleri ve API anahtarı yalnızca kullanıcının kendi
+      tarayıcısının yerel depolamasında tutulur.
+    </p>
+
+    <h2>5. Veri Paylaşımı</h2>
+    <p>
+      Eklenti, yukarıda belirtilen çeviri ve transkripsiyon hizmetleri dışında hiçbir veriyi
+      üçüncü taraflarla paylaşmaz. Kişisel bilgileriniz toplanmaz, satılmaz veya pazarlama
+      amaçlı kullanılmaz.
+    </p>
+
+    <h2>6. İzinler</h2>
+    <p>Eklentinin kullandığı Chrome izinleri ve nedenleri:</p>
+    <ul>
+      <li><strong>activeTab:</strong> Aktif sekmeye altyazı overlay'i eklemek için</li>
+      <li><strong>scripting:</strong> Altyazı bileşenlerini sayfalara enjekte etmek için</li>
+      <li><strong>storage:</strong> Kullanıcı ayarlarını kaydetmek için</li>
+      <li><strong>tabs:</strong> Aktif sekme bilgisine erişmek için</li>
+      <li><strong>offscreen:</strong> Sekme sesini arka planda yakalamak için</li>
+      <li><strong>tabCapture:</strong> Sekme ses akışına erişmek için</li>
+    </ul>
+
+    <h2>7. Kullanıcı Hakları</h2>
+    <p>Kullanıcılar her zaman:</p>
+    <ul>
+      <li>Eklentiyi kaldırarak tüm yerel verileri silebilir</li>
+      <li>Mikrofon iznini tarayıcı ayarlarından iptal edebilir</li>
+      <li>Sekme sesi yakalama özelliğini kullanmayı tercih etmeyebilir</li>
+    </ul>
+
+    <h2>8. Değişiklikler</h2>
+    <p>
+      Bu gizlilik politikası zaman zaman güncellenebilir. Önemli değişiklikler eklenti
+      güncellemeleriyle birlikte duyurulacaktır.
+    </p>
+
+    <h2>9. İletişim</h2>
+    <p>
+      Gizlilik politikasıyla ilgili sorularınız için
+      <a href="https://github.com/atezer/live-broadcast-EN-TR-translate/issues">GitHub Issues</a>
+      sayfasından iletişime geçebilirsiniz.
+    </p>
+  </div>
+</body>
+</html>

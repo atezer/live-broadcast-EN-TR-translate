@@ -18,9 +18,9 @@ if (window.__subtitleCleanup) {
   let currentSettings = {
     position: 'bottom',
     fontSize: 22,
-    showEnglish: false,
+    showEnglish: true,
     autoHide: true,
-    source: 'microphone'
+    source: 'tab'
   };
 
   const translationCache = new Map();
@@ -105,7 +105,6 @@ if (window.__subtitleCleanup) {
       }
     } catch (err) {
       if (err.name === 'AbortError') return null;
-      console.warn('[Altyazı] Çeviri hatası:', err);
     }
 
     return text;
@@ -185,7 +184,6 @@ if (window.__subtitleCleanup) {
       }
       updateLevel();
     } catch (e) {
-      console.warn('[Altyazı] Audio monitor başlatılamadı:', e);
     }
   }
 
@@ -386,7 +384,6 @@ if (window.__subtitleCleanup) {
       audioStream = stream;
       return stream;
     } catch (err) {
-      console.error('[Altyazı] Mikrofon erişim hatası:', err);
       throw err;
     }
   }
@@ -559,7 +556,6 @@ if (window.__subtitleCleanup) {
         return;
       }
 
-      console.warn('[Altyazı] Hata:', event.error);
       if (event.error === 'not-allowed') {
         setStatusMessage('Mikrofon izni gerekiyor!');
         showError('Mikrofon izni gerekiyor');
