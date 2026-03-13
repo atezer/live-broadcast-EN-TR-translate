@@ -1,5 +1,9 @@
 # Live Turkish Subtitle – Chrome Extension
 
+<p align="center">
+  <img src="logo128.png" alt="Live Turkish Subtitle Logo" width="128" height="128">
+</p>
+
 Tarayıcı sekmesindeki veya mikrofondaki İngilizce konuşmayı gerçek zamanlı olarak Türkçe altyazıya çeviren Chrome eklentisi.
 
 ## Özellikler
